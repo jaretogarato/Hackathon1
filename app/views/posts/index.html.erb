@@ -1,2 +1,14 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% @posts.each do |p| %>
+	<div class="ui card">
+	  <div class="content">
+	    <a class="header"><%= p.title %></a>
+	    <div class="description">
+	      <%= p.content %>
+	    </div>
+	  </div>
+	  <div class="extra content">
+	    
+	  </div>
+	</div>
+<% end %>
+
