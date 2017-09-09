@@ -5,7 +5,7 @@
 <h3 class="ui center aligned header">Stackable Grid</h3>
 <div class="ui two column stackable grid">
 
-@users
+
 
   <div class="three column row">
     <% @posts.each do |post| %>
@@ -18,6 +18,20 @@
       </div>
     <% end %>
   </div>
+
+  <!-- <% @posts.each do |p| %>
+  	<div class="ui card">
+  	  <div class="content">
+  	    <a class="header"><%= p.title %></a>
+  	    <div class="description">
+  	      <%= p.content %>
+  	    </div>
+  	  </div>
+  	  <div class="extra content">
+
+  	  </div>
+  	</div>
+  <% end %> -->
 
   <!-- <div class="ten wide column">
     <div class="ui segment">e</div>
