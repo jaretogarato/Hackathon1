@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  
+
   def index
     @posts = Post.all
   end
@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.posts.new 
+    @post = current_user.posts.new
   end
 
   def create
@@ -30,11 +30,11 @@ class PostsController < ApplicationController
   def destroy
   end
 
-  private 
+  private
 
   def post_params
     params.require(:post).permit(:content, :title)
   end
 
-  
+
 end
