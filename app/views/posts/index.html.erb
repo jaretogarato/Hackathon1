@@ -1,23 +1,37 @@
 <h1>ToTwitterDoGram</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
 
 
-<h3 class="ui center aligned header">Stackable Grid</h3>
+
 <div class="ui two column stackable grid">
-
-
-
   <div class="three column row">
     <% @posts.each do |post| %>
       <div class="column">
         <div class="ui segment">
+          <h3><%= post.title %></h3>
           <%= post.content %><br />
-
-          <%= link_to "here is the link", user_post_path(current_user, post.id) %>
+          <%= link_to "See post and comments", user_post_path(current_user, post.id) %>
+          <!-- <%= link_to "See post and comments", user_comments_path(current_user) %> -->
+          <!-- <%= link_to "See post and comments", post_comments_path(post.id) %> -->
         </div>
       </div>
     <% end %>
   </div>
+
+  <!-- <div class="three column row">
+    <% @posts.each do |post| %>
+      <div class="ui card">
+        <div class="content">
+          <a class="header"><%= post.title %></a>
+        </div>
+        <div class="description">
+          <%= post.content %><br />
+        </div>
+        <div>
+          <%= link_to "See post and comments", user_post_path(current_user, post.id) %>
+        </div>
+      </div>
+    <% end %>
+  </div> -->
 
   <!-- <% @posts.each do |p| %>
   	<div class="ui card">

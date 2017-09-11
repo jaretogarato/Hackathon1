@@ -7,6 +7,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  resources :posts do
+    resources :comments
+  end
+  
   resources :users do
     resources :posts
     resources :comments

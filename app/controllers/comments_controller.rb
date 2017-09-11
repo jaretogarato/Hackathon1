@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
+  before_action :set_post
+
   def index
     @comments = Comment.all
+    # @post =
   end
 
   def show
@@ -28,4 +31,8 @@ class CommentsController < ApplicationController
     @comment.destroy
     redirect_to user_comments([:user_id])
   end
+  private
+    def set_post
+      @post = Post.find(params[:post_id])
+    end
 end

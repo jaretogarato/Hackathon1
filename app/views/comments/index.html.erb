@@ -1,4 +1,13 @@
+<h1>Yer Post</h1>
 
+<div><h3><%= @post.title %> </h3></div>
+<div><%= @post.content %> </div>
+
+// show comments
+
+<% @comments.each do |comment| %>
+  <%= comment %>
+<% end %>
 
 
 
